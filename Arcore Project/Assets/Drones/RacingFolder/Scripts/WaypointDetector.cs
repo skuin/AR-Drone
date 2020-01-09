@@ -34,10 +34,11 @@ public class WaypointDetector : MonoBehaviour {
     //checks for entring trigger
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.root.tag == "Player")//searches for the player tag in the root of the transform (all drones must be player tags)
+        if(other.tag == "Player")//searches for the player tag in the root of the transform (all drones must be player tags)
         {
             if (passSound) passSound.Play();
             trackManager.PassedThroughThisPoint(transform.parent); //let track manager known which waypoint we just passed(returning parent of detector transform because that one is stored in the array)
+            Debug.Log("Passed WayPoint");
         }
     }
 }

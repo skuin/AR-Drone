@@ -55,11 +55,16 @@ public class LeftJoystick : MonoBehaviour
                 player.GetComponent<DroneMovement>().customFeed_downward = -JoyVec.y;
             }
 
-             if (JoyVec.x > 0)
+             if (JoyVec.x > 0.7)
             {
                 player.GetComponent<DroneMovement>().customFeed_rotateRight = JoyVec.x;
             }
-            else
+            else if(JoyVec.x == 0)
+            {
+                player.GetComponent<DroneMovement>().customFeed_rotateLeft = 0;
+                player.GetComponent<DroneMovement>().customFeed_rotateRight = 0;
+            }
+            else if (JoyVec.x < -0.7)
             {
                 player.GetComponent<DroneMovement>().customFeed_rotateLeft = -JoyVec.x;
 
