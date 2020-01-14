@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FPC
   - Pass
+  - DronePrefab
   layers:
   - Default
   - TransparentFX

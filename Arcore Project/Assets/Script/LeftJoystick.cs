@@ -15,6 +15,7 @@ public class LeftJoystick : MonoBehaviour
     Rigidbody playerrigi;
     DroneMovement playerdronM;
     
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +37,9 @@ public class LeftJoystick : MonoBehaviour
         if (moving)
         {
             // 왼쪽의 조이스틱
-            // 앞뒤는 움직이고 양 옆은 회전
 
-             if (JoyVec.y > 0.7)
+            // 위쪽 방향
+            if (JoyVec.y > 0.7)
             {
                 player.GetComponent<DroneMovement>().customFeed_downward = 0;
                 player.GetComponent<DroneMovement>().customFeed_upward = JoyVec.y;
@@ -48,14 +49,14 @@ public class LeftJoystick : MonoBehaviour
                 player.GetComponent<DroneMovement>().customFeed_downward = 0;
                 player.GetComponent<DroneMovement>().customFeed_upward = 0;
             }
-            
+            // 아래방향
             else if(JoyVec.y < -0.7){
-                player.GetComponent<DroneMovement>().customFeed_downward = 0;
                 player.GetComponent<DroneMovement>().customFeed_upward = 0;
                 player.GetComponent<DroneMovement>().customFeed_downward = -JoyVec.y;
             }
 
-             if (JoyVec.x > 0.7)
+            // 좌우 회전
+            if (JoyVec.x > 0.7)
             {
                 player.GetComponent<DroneMovement>().customFeed_rotateRight = JoyVec.x;
             }
@@ -99,6 +100,7 @@ public class LeftJoystick : MonoBehaviour
         // 거리가 반지름보다 크면 반지름 크기만큼
         else
             stick.position = stickFirstPos + JoyVec * radius;
+
     }
 
     public void DragEnd()
