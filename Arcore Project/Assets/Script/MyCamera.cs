@@ -18,7 +18,7 @@ public class MyCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = GameObject.Find("Player").GetComponent<Transform>();
+        target = GameObject.Find("DronePrefab").GetComponent<Transform>();
 
         Vector3 pos = Vector3.Lerp(transform.position, target.position + offset, Time.deltaTime * cameraSpeed);
 

@@ -60,6 +60,11 @@ public class resetTransform : MonoBehaviour
         Debug.Log("reset button clicked!");
     }
 
+    public void OnMenuButton()
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
