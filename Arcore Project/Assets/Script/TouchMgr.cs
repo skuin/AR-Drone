@@ -73,6 +73,9 @@ public class TouchMgr : MonoBehaviour
                 TrackManager.SetActive(true);
                 DronePrefab.SetActive(true);
 
+                UIManager.UIMgr.SetEnableTrue();
+                PlaneGenerator.SetActive(false);
+
                 //// 객체를 고정할 앵커 생성
                 //var anchor = hit.Trackable.CreateAnchor(hit.Pose);
                 //// 객체를 생성
@@ -87,25 +90,27 @@ public class TouchMgr : MonoBehaviour
                 //    rot.eulerAngles.y, ARCamera.transform.position.z);
 
                 createObj = true;
+                UICreate = true;
                 touch.phase = TouchPhase.Ended;
             }
         }
         else if (createObj == true && UICreate == false)
         {
             // UI도 클릭 후에 활성화
-            UIcanvas.enabled = true;
-            Debug.Log("\n\n UI Activity : " + GameObject.Find("UI").activeInHierarchy);
-            Debug.Log("\n\n");
+            //UIManager.UIMgr.SetEnableTrue();
+            //UIcanvas.enabled = true;
+            //Debug.Log("\n\n UI Activity : " + GameObject.Find("UI").activeInHierarchy);
+            //Debug.Log("\n\n");
 
             // 조이스틱에 플레이어 연결
             //LeftJoystick.leftJoy.player = PlayerMgr.playermgr.SettingPlayerTrandform();
             //RightJoystick.rightJoy.player = PlayerMgr.playermgr.SettingPlayerTrandform();
 
-            PlaneGenerator.SetActive(false);
-            Debug.Log("\n\n Plane Generator Activity : " + PlaneGenerator.activeInHierarchy);
-            Debug.Log("\n\n");
+            //PlaneGenerator.SetActive(false);
+            //Debug.Log("\n\n Plane Generator Activity : " + PlaneGenerator.activeInHierarchy);
+            //Debug.Log("\n\n");
 
-            UICreate = true;
+            //UICreate = true;
         }
         else if (createObj == true && UICreate == true)
         {
