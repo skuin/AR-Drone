@@ -28,6 +28,8 @@ ScriptsOnlyBuild:
     - WaypointRenderer
     - WaypointeRendererBuilder
     - resetTransform
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
@@ -39,6 +41,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/FreeStage.unity:
     - Class: 1
@@ -515,7 +519,7 @@ ScriptsOnlyBuild:
     className: Anchor
   - hash:
       serializedVersion: 2
-      Hash: 80fa55c781ce6903f95f93be891408b2
+      Hash: 7973b3e316a56c360ccb7ece01076e4e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: resetTransform
@@ -1683,5 +1687,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Stage1.unity
   - Assets/Scenes/Stage2.unity
   - Assets/Scenes/FreeStage.unity
-  playerPath: C:/Users/SooJeong/Desktop/AR-Drone-master/AR-Drone-master/AR-Drone/Arcore
-    Project/test/test00.apk
+  playerPath: "C:/Users/skuin/Desktop/\uD604\uC7A5\uC2E4\uC2B5/drone01.apk"
