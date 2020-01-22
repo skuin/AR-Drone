@@ -21,6 +21,7 @@ public class TouchMgr : MonoBehaviour
 
     public Canvas UIcanvas;
     public GameObject PlaneGenerator;
+    public GameObject PointCloud;
     public GameObject TrackManager;
     public GameObject DronePrefab;
 
@@ -75,6 +76,7 @@ public class TouchMgr : MonoBehaviour
 
                 UIManager.UIMgr.SetEnableTrue();
                 PlaneGenerator.SetActive(false);
+                PointCloud.SetActive(false);
 
                 //// 객체를 고정할 앵커 생성
                 //var anchor = hit.Trackable.CreateAnchor(hit.Pose);

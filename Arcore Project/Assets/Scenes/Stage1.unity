@@ -155,6 +155,7 @@ MonoBehaviour:
   UICreate: 0
   UIcanvas: {fileID: 190807753}
   PlaneGenerator: {fileID: 2083512464}
+  PointCloud: {fileID: 53524680}
   TrackManager: {fileID: 1314434196535514}
   DronePrefab: {fileID: 1732391480}
 --- !u!4 &18757587
@@ -171,6 +172,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &53524680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1536853937296922, guid: 26558ae1d2e7243728486d789f984c53,
+    type: 3}
+  m_PrefabInstance: {fileID: 150429108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &89834276
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +962,7 @@ RectTransform:
   m_GameObject: {fileID: 443498393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children:
   - {fileID: 2035744465}
   m_Father: {fileID: 190807754}
@@ -2716,6 +2723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007a9261ecd41b7458e97289e4c3f46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointCloud: {fileID: 53524680}
+  planeGenerator: {fileID: 2083512464}
 --- !u!1 &1403562132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,10 +2784,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3523,7 +3532,7 @@ RectTransform:
   m_GameObject: {fileID: 1719954135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1403562133}
   m_Father: {fileID: 190807754}
@@ -3531,7 +3540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: -61}
+  m_AnchoredPosition: {x: 20, y: -75}
   m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1719954137
@@ -4003,11 +4012,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 30
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

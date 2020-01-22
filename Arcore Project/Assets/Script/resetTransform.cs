@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class resetTransform : MonoBehaviour
@@ -80,7 +81,7 @@ public class resetTransform : MonoBehaviour
 
     public void OnMenuButton()
     {
-
+        SceneManager.LoadScene("Menu");
     }
 
     // Start is called before the first frame update

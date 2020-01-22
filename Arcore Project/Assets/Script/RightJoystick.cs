@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class RightJoystick : MonoBehaviour
@@ -14,6 +15,22 @@ public class RightJoystick : MonoBehaviour
     private bool moving;
     private bool move_up;
 
+    private Text forwardTxt;
+    private int forwardVal = 0;
+    private int forwardCount = 0;
+
+    private Text backwardTxt;
+    private int backwardVal = 0;
+    private int backwardCount = 0;
+
+    private Text leftwardTxt;
+    private int leftwardVal = 0;
+    private int leftCount = 0;
+
+    private Text rightwardTxt;
+    private int rightwardVal = 0;
+    private int rightwardCount = 0;
+
     void Start()
     {
         radius = GetComponent<RectTransform>().sizeDelta.y * 0.5f;
@@ -24,6 +41,11 @@ public class RightJoystick : MonoBehaviour
         radius *= canvas;
 
         moving = false;
+
+        forwardTxt = GameObject.Find("Forward").GetComponent<Text>();
+        backwardTxt = GameObject.Find("Backward").GetComponent<Text>();
+        leftwardTxt = GameObject.Find("Leftward").GetComponent<Text>();
+        rightwardTxt = GameObject.Find("Rightward").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -37,24 +59,51 @@ public class RightJoystick : MonoBehaviour
                 //playerrigi.AddForce((JoyVec * playerdronM.customFeed_forward) * Time.deltaTime, ForceMode.Force);
                 player.GetComponent<DroneMovement>().customFeed_backward = 0;
                 player.GetComponent<DroneMovement>().customFeed_forward = JoyVec.y;
+
+                if(forwardCount > 10){
+                    forwardVal++;
+                    forwardCount = 0;
+                }
+                forwardCount++;
+                forwardTxt.text = "Forward : " + forwardVal.ToString();
             }
             else
             {
                 player.GetComponent<DroneMovement>().customFeed_forward = 0;
                 player.GetComponent<DroneMovement>().customFeed_backward = -JoyVec.y;
                 //playerrigi.AddForce(-(JoyVec * playerdronM.customFeed_forward) * Time.deltaTime, ForceMode.Force);
+            
+                if(backwardCount > 10){
+                    backwardVal++;
+                    backwardCount = 0;
+                }
+                backwardCount++;
+                backwardTxt.text = "Backward : " + backwardVal.ToString();
             }
 
             if (JoyVec.x > 0)
             {
                 player.GetComponent<DroneMovement>().customFeed_rotateLeft = 0;
                 player.GetComponent<DroneMovement>().customFeed_rightward = JoyVec.x;
+            
+                if(rightwardCount > 10){
+                    rightwardVal++;
+                    rightwardCount = 0;
+                }
+                rightwardCount++;
+                rightwardTxt.text = "Rightward : " + rightwardVal.ToString();
             }
             else
             {
                 player.GetComponent<DroneMovement>().customFeed_rotateRight = 0;
                 player.GetComponent<DroneMovement>().customFeed_leftward = -JoyVec.x;
-
+            
+                if(leftCount > 10){
+                    leftwardVal++;
+                    leftCount = 0;
+                }
+                leftCount++;
+                leftwardTxt.text = "Leftward : " + leftwardVal.ToString();
             }
         }
         else

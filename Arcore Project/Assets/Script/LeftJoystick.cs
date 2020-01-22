@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class LeftJoystick : MonoBehaviour
@@ -14,6 +15,23 @@ public class LeftJoystick : MonoBehaviour
     private bool moving;
     Rigidbody playerrigi;
     DroneMovement playerdronM;
+
+    private Text upwardTxt;
+    private int upwardVal = 0;
+
+    private Text downwardTxt;
+    private int downwardVal = 0;
+
+    private Text rightRotationTxt;
+    private int rightRotationVal = 0;
+
+    private Text leftRotationTxt;
+    private int leftRotationVal = 0;
+
+    private int upWardCount = 0;
+    private int downWardCount = 0;
+    private int rightRotCount = 0;
+    private int leftRotCount = 0;
     
 
     // Start is called before the first frame update
@@ -29,6 +47,11 @@ public class LeftJoystick : MonoBehaviour
         moving = false;
         playerrigi = GameObject.FindWithTag("Player").GetComponent<Rigidbody>();
         playerdronM = GameObject.FindWithTag("Player").GetComponent<DroneMovement>();
+
+        upwardTxt = GameObject.Find("Upward").GetComponent<Text>();
+        downwardTxt = GameObject.Find("Downward").GetComponent<Text>();
+        rightRotationTxt = GameObject.Find("RightRotation").GetComponent<Text>();
+        leftRotationTxt = GameObject.Find("LeftRotation").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -43,6 +66,14 @@ public class LeftJoystick : MonoBehaviour
             {
                 player.GetComponent<DroneMovement>().customFeed_downward = 0;
                 player.GetComponent<DroneMovement>().customFeed_upward = JoyVec.y;
+
+                if(upWardCount > 10){
+                    upwardVal++;
+                    upWardCount = 0;
+                }
+                upWardCount++;
+                upwardTxt.text = "Upward : " + upwardVal.ToString();
+
             }
             else if(JoyVec.y == 0)
             {
@@ -53,12 +84,26 @@ public class LeftJoystick : MonoBehaviour
             else if(JoyVec.y < -0.7){
                 player.GetComponent<DroneMovement>().customFeed_upward = 0;
                 player.GetComponent<DroneMovement>().customFeed_downward = -JoyVec.y;
+
+                if(downWardCount > 10){
+                    downwardVal++;
+                    downWardCount = 0;
+                }
+                downWardCount++;
+                downwardTxt.text = "Downward : " + downwardVal.ToString();
             }
 
             // 좌우 회전
             if (JoyVec.x > 0.7)
             {
                 player.GetComponent<DroneMovement>().customFeed_rotateRight = JoyVec.x;
+
+                if(rightRotCount > 10){
+                    rightRotationVal++;
+                    rightRotCount = 0;
+                }
+                rightRotCount++;
+                rightRotationTxt.text = "Right Rotation : " + rightRotationVal.ToString();
             }
             else if(JoyVec.x == 0)
             {
@@ -68,6 +113,13 @@ public class LeftJoystick : MonoBehaviour
             else if (JoyVec.x < -0.7)
             {
                 player.GetComponent<DroneMovement>().customFeed_rotateLeft = -JoyVec.x;
+
+                if(leftRotCount > 10){
+                    leftRotationVal++;
+                    leftRotCount = 0;
+                }
+                leftRotCount++;
+                leftRotationTxt.text = "Left Rotation : " + leftRotationVal.ToString();
 
             }
         }
@@ -79,7 +131,6 @@ public class LeftJoystick : MonoBehaviour
             player.GetComponent<DroneMovement>().customFeed_rotateRight = 0;
         }
     }
-
     public void Drag(BaseEventData _data)
     {
         moving = true;

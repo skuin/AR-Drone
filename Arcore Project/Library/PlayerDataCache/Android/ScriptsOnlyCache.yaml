@@ -41,8 +41,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/FreeStage.unity:
     - Class: 1
@@ -555,7 +553,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ff17726e329d95c115a002a4f93f89ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1647,7 +1645,7 @@ ScriptsOnlyBuild:
     className: HorizonJoystick
   - hash:
       serializedVersion: 2
-      Hash: 50e259169b0bb25597ef61580cd08b06
+      Hash: 1d2019c008d056d2b225a27a8b09c946
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TouchMgr

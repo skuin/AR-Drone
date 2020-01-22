@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public GameObject pointCloud;
+    public GameObject planeGenerator;
+
     GameObject scoreObj;
     Text scoreTxt;
     public static int mScore = 0;
@@ -17,6 +20,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        pointCloud.SetActive(true);
+        planeGenerator.SetActive(true);
+
         scoreObj = GameObject.Find("Score");
         scoreTxt = scoreObj.GetComponent<Text>();
         scoreTxt.text = "Score : " + mScore.ToString();

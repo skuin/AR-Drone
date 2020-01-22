@@ -9,10 +9,12 @@ public class Menu : MonoBehaviour
     public GameObject menu;
     public GameObject stage;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        menu.SetActive(true);
+        stage.SetActive(false);
     }
 
     public void OnClickSelectStageButton()
