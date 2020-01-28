@@ -273,6 +273,7 @@
      <Compile Include="Assets\Script\Joystick1.cs" />
      <Compile Include="Assets\Script\LeftJoystick.cs" />
      <Compile Include="Assets\Script\Menu.cs" />
+     <Compile Include="Assets\Script\MovePointSide.cs" />
      <Compile Include="Assets\Script\MyCamera.cs" />
      <Compile Include="Assets\Script\MyCamera2.cs" />
      <Compile Include="Assets\Script\PassTrigger.cs" />

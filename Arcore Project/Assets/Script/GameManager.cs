@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
         pointCloud.SetActive(true);
         planeGenerator.SetActive(true);
 
-        scoreObj = GameObject.Find("Score");
+        scoreObj = GameObject.Find("Collision");
         scoreTxt = scoreObj.GetComponent<Text>();
-        scoreTxt.text = "Score : " + mScore.ToString();
+        scoreTxt.text = "Collision Count : " + mScore.ToString();
     }
 
     public void UpgradeScore()
@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
 
     public void DowngradeScore()
     {
-        mScore -= 10;
-        scoreTxt.text = "Score : " + mScore.ToString();
+        mScore += 1;
+        scoreTxt.text = "Collision Count : " + mScore.ToString();
     }
 
     // Update is called once per frame
