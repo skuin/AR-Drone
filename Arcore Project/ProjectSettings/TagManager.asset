@@ -8,6 +8,7 @@ TagManager:
   - Pass
   - DronePrefab
   - Obs
+  - TrackManager
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,7 @@ public class WaypointDetector : MonoBehaviour {
     {
         try
         {
-            trackManager = GameObject.Find("TrackManager").GetComponent<TrackManager>(); //getting the track manager class component
+            trackManager = GameObject.FindWithTag("TrackManager").GetComponent<TrackManager>(); //getting the track manager class component
         }
         catch (System.Exception ex)
         {

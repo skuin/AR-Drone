@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrackManager : MonoBehaviour
 {
@@ -14,10 +15,18 @@ public class TrackManager : MonoBehaviour
         if (transform.childCount == 0)
             gameObject.SetActive(false);
     }
+
+    private Image lapEnd;
+    private Text lapEndTxt;
+    private Text lapTimeText;
     private void Start()
     {
         FindWayPoints(); //finds allwaypoints if the inital list is 0, must be childed to this manager
         DisableTriggers();
+
+        lapEnd = GameObject.Find("ClearPanel").GetComponent<Image>();
+        lapEndTxt = GameObject.Find("ClearText").GetComponent<Text>();
+        lapTimeText = GameObject.Find("LapTimeText").GetComponent<Text>();
     }
 
     public void FindWayPoints()
@@ -225,6 +234,7 @@ public class TrackManager : MonoBehaviour
     public UnityEngine.UI.Text bestLapTime_UI;
     [Tooltip("UI Text to connect score times if you like.")]
     public UnityEngine.UI.Text lapTime_UI;
+    
     void LapTimerMethod()
     {
         if (waypointCounter == 1)
@@ -233,9 +243,15 @@ public class TrackManager : MonoBehaviour
             myMethod = TrackLapTime();
             StartCoroutine(myMethod);
         }
+        // 트랙 이 끝나면
         else if (waypointCounter == 0)
         {
             //print("Lap ended");
+            lapEnd.enabled = true;
+            lapEndTxt.enabled = true;
+            lapTimeText.text = "걸린시간 : " + lapTime.ToString("f2") + " 초";
+            lapTimeText.enabled = true;
+
             if(onTrackManagerFinished != null)
                 onTrackManagerFinished();
 
