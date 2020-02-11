@@ -9,6 +9,7 @@ TagManager:
   - DronePrefab
   - Obs
   - TrackManager
+  - Score
   layers:
   - Default
   - TransparentFX

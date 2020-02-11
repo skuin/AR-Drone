@@ -29,8 +29,6 @@ ScriptsOnlyBuild:
     - WaypointRenderer
     - WaypointeRendererBuilder
     - resetTransform
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
@@ -42,8 +40,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/FreeStage.unity:
     - Class: 1
@@ -113,53 +109,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10088}
+      Script: {instanceID: 10090}
     - Class: 114
-      Script: {instanceID: 10106}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10110}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10138}
+      Script: {instanceID: 10140}
     - Class: 114
-      Script: {instanceID: 10314}
+      Script: {instanceID: 10316}
     - Class: 114
-      Script: {instanceID: 10376}
+      Script: {instanceID: 10378}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10480}
     - Class: 114
-      Script: {instanceID: 10550}
+      Script: {instanceID: 10552}
     - Class: 114
-      Script: {instanceID: 10636}
+      Script: {instanceID: 10638}
     - Class: 114
-      Script: {instanceID: 10744}
+      Script: {instanceID: 10746}
     - Class: 114
-      Script: {instanceID: 10828}
+      Script: {instanceID: 10830}
     - Class: 114
-      Script: {instanceID: 10996}
+      Script: {instanceID: 10998}
     - Class: 114
-      Script: {instanceID: 11072}
+      Script: {instanceID: 11074}
     - Class: 114
-      Script: {instanceID: 11108}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11170}
-    - Class: 114
-      Script: {instanceID: 11190}
+      Script: {instanceID: 11172}
     - Class: 114
       Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11374}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11502}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 41672}
+      Script: {instanceID: 11506}
+    - Class: 114
+      Script: {instanceID: 11508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -301,53 +297,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10088}
+      Script: {instanceID: 10090}
     - Class: 114
-      Script: {instanceID: 10106}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10110}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10138}
+      Script: {instanceID: 10140}
     - Class: 114
-      Script: {instanceID: 10314}
+      Script: {instanceID: 10316}
     - Class: 114
-      Script: {instanceID: 10376}
+      Script: {instanceID: 10378}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10480}
     - Class: 114
-      Script: {instanceID: 10550}
+      Script: {instanceID: 10552}
     - Class: 114
-      Script: {instanceID: 10636}
+      Script: {instanceID: 10638}
     - Class: 114
-      Script: {instanceID: 10744}
+      Script: {instanceID: 10746}
     - Class: 114
-      Script: {instanceID: 10828}
+      Script: {instanceID: 10830}
     - Class: 114
-      Script: {instanceID: 10996}
+      Script: {instanceID: 10998}
     - Class: 114
-      Script: {instanceID: 11072}
+      Script: {instanceID: 11074}
     - Class: 114
-      Script: {instanceID: 11108}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11170}
-    - Class: 114
-      Script: {instanceID: 11190}
+      Script: {instanceID: 11172}
     - Class: 114
       Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11374}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11502}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 41672}
+      Script: {instanceID: 11506}
+    - Class: 114
+      Script: {instanceID: 11508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -440,53 +436,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10088}
+      Script: {instanceID: 10090}
     - Class: 114
-      Script: {instanceID: 10106}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10110}
+      Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10138}
+      Script: {instanceID: 10140}
     - Class: 114
-      Script: {instanceID: 10314}
+      Script: {instanceID: 10316}
     - Class: 114
-      Script: {instanceID: 10376}
+      Script: {instanceID: 10378}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10480}
     - Class: 114
-      Script: {instanceID: 10550}
+      Script: {instanceID: 10552}
     - Class: 114
-      Script: {instanceID: 10636}
+      Script: {instanceID: 10638}
     - Class: 114
-      Script: {instanceID: 10744}
+      Script: {instanceID: 10746}
     - Class: 114
-      Script: {instanceID: 10828}
+      Script: {instanceID: 10830}
     - Class: 114
-      Script: {instanceID: 10996}
+      Script: {instanceID: 10998}
     - Class: 114
-      Script: {instanceID: 11072}
+      Script: {instanceID: 11074}
     - Class: 114
-      Script: {instanceID: 11108}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11170}
-    - Class: 114
-      Script: {instanceID: 11190}
+      Script: {instanceID: 11172}
     - Class: 114
       Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11374}
+      Script: {instanceID: 11194}
     - Class: 114
-      Script: {instanceID: 11426}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11428}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11502}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11504}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 41672}
+      Script: {instanceID: 11506}
+    - Class: 114
+      Script: {instanceID: 11508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1070,6 +1066,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GoogleARCore.Examples.AugmentedFaces
     className: AugmentedFacesExampleController
+  - hash:
+      serializedVersion: 2
+      Hash: c4aa5e76778959c02449b98173e2c36b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovePointUpDown
   - hash:
       serializedVersion: 2
       Hash: dd33b6d56fc1b750a730e38fbc400627
@@ -1696,6 +1698,12 @@ ScriptsOnlyBuild:
     className: DronePropelers
   - hash:
       serializedVersion: 2
+      Hash: c4aa5e76778959c02449b98173e2c36b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovePointUpRotation
+  - hash:
+      serializedVersion: 2
       Hash: a72eb53bc0eea447fa67cfb9cd1b4d0a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1712,22 +1720,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c4aa5e76778959c02449b98173e2c36b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MovePointUpDown
-  - hash:
-      serializedVersion: 2
-      Hash: c4aa5e76778959c02449b98173e2c36b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MovePointUpRotation
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Stage1.unity
   - Assets/Scenes/FreeStage.unity
   - Assets/Scenes/Stage2.unity
-  playerPath: "C:/Users/skuin/Desktop/\uD604\uC7A5\uC2E4\uC2B5/drone04.apk"
+  playerPath: "C:/Users/skuin/Desktop/JU/\uD604\uC7A5\uC2E4\uC2B5/ARCoreDrone.apk"

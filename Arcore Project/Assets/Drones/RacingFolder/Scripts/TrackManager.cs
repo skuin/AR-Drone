@@ -19,6 +19,7 @@ public class TrackManager : MonoBehaviour
     private Image lapEnd;
     private Text lapEndTxt;
     private Text lapTimeText;
+    private Text scoreText;
     private void Start()
     {
         FindWayPoints(); //finds allwaypoints if the inital list is 0, must be childed to this manager
@@ -27,6 +28,7 @@ public class TrackManager : MonoBehaviour
         lapEnd = GameObject.Find("ClearPanel").GetComponent<Image>();
         lapEndTxt = GameObject.Find("ClearText").GetComponent<Text>();
         lapTimeText = GameObject.Find("LapTimeText").GetComponent<Text>();
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     }
 
     public void FindWayPoints()
@@ -51,6 +53,7 @@ public class TrackManager : MonoBehaviour
     public void PassedThroughThisPoint(Transform _waypoint)
     {
         DeactivateCurrentWayPoint();
+        GameManager.instance.UpgradeScore();
 
         if (waypointCounter == waypointArray.Length - 1)
         {
@@ -251,6 +254,8 @@ public class TrackManager : MonoBehaviour
             lapEndTxt.enabled = true;
             lapTimeText.text = "걸린시간 : " + lapTime.ToString("f2") + " 초";
             lapTimeText.enabled = true;
+            scoreText.text = "점수 : " + GameManager.mScore.ToString() + " 점";
+            scoreText.enabled = true;
 
             if(onTrackManagerFinished != null)
                 onTrackManagerFinished();

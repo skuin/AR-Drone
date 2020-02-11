@@ -11,8 +11,11 @@ public class GameManager : MonoBehaviour
     public GameObject planeGenerator;
 
     GameObject scoreObj;
+    GameObject collCountObj;
     Text scoreTxt;
+    Text collCountTxt;
     public static int mScore = 0;
+    public static int mCollisionCount = 0;
     void Awake()
     {
         if (instance == null) instance = this;
@@ -23,9 +26,13 @@ public class GameManager : MonoBehaviour
         pointCloud.SetActive(true);
         planeGenerator.SetActive(true);
 
-        scoreObj = GameObject.Find("Collision");
+        scoreObj = GameObject.Find("ScoreTextPanel");
         scoreTxt = scoreObj.GetComponent<Text>();
-        scoreTxt.text = "Collision Count : " + mScore.ToString();
+        scoreTxt.text = "Score : " + mScore.ToString();
+
+        collCountObj = GameObject.Find("Collision");
+        collCountTxt = collCountObj.GetComponent<Text>();
+        collCountTxt.text = "Collision Count : " + mCollisionCount.ToString();
     }
 
     public void UpgradeScore()
@@ -36,8 +43,12 @@ public class GameManager : MonoBehaviour
 
     public void DowngradeScore()
     {
-        mScore += 1;
-        scoreTxt.text = "Collision Count : " + mScore.ToString();
+        if(mScore > 0)
+            mScore -= 20;
+        scoreTxt.text = "Score : " + mScore.ToString();
+
+        mCollisionCount += 1;
+        collCountTxt.text = "Collision Count : " + mCollisionCount.ToString();
     }
 
     // Update is called once per frame
