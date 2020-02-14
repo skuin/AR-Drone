@@ -56,7 +56,6 @@ public class RightJoystick : MonoBehaviour
         {
             if (JoyVec.y > 0)
             {
-                //playerrigi.AddForce((JoyVec * playerdronM.customFeed_forward) * Time.deltaTime, ForceMode.Force);
                 player.GetComponent<DroneMovement>().customFeed_backward = 0;
                 player.GetComponent<DroneMovement>().customFeed_forward = JoyVec.y;
 
@@ -71,7 +70,6 @@ public class RightJoystick : MonoBehaviour
             {
                 player.GetComponent<DroneMovement>().customFeed_forward = 0;
                 player.GetComponent<DroneMovement>().customFeed_backward = -JoyVec.y;
-                //playerrigi.AddForce(-(JoyVec * playerdronM.customFeed_forward) * Time.deltaTime, ForceMode.Force);
             
                 if(backwardCount > 10){
                     backwardVal++;

@@ -6,62 +6,63 @@ using UnityEngine.UI;
 
 public class resetTransform : MonoBehaviour
 {
-    public GameObject drone;
-    public Camera mainCamera;
-    public Camera FPCamera;
-    public Camera TPCamera;
+    public GameObject drone;    // 드론
+    public Camera mainCamera;   // 고장 카메라
+    public Camera FPCamera;     // 1인칭 카메라
+    public Camera TPCamera;     // 3인칭 카메라
 
-    public Image panelImage;
-    public Text FCTxt;
-    public Text TCTxt;
-    public Text FixCTxt;
-    Transform startPos;
+    public Image panelImage;    // 카메라 종류나타낼 패널
+    public Text FCTxt;      // 1인칭 카메라 텍스트
+    public Text TCTxt;      // 3인칭 카메라 텍스트
+    public Text FixCTxt;    // 고정 카메라 텍스트
+    Transform startPos;     // 처음 드론위치 저장
     Vector3 startRot;
 
-    bool cameraMode = false;
-    int cameraMode2 = 0;
+    int cameraMode = 0;     // 카메라 인칭 모드 ( 고정 - 1인칭 - 3인칭 )
 
+    // 카메라 모드 설정
     public void CameraChange()
     {
-        if (cameraMode2==0){
+        if (cameraMode==0){
             Debug.Log("main mode");
             FPCamera.enabled = true;
             mainCamera.enabled = false;
             TPCamera.enabled = false;
-            cameraMode2 = 1;
+            cameraMode = 1;
             StartCoroutine("ChangeCameraText");
         }
-        else if(cameraMode2 ==1 ){
+        else if(cameraMode ==1 ){
             Debug.Log("First mode");
             FPCamera.enabled = false;
             mainCamera.enabled = false;
             TPCamera.enabled = true;
-            cameraMode2 = 2;
+            cameraMode = 2;
             StartCoroutine("ChangeCameraText");
         }
-        else if(cameraMode2 == 2 ){
+        else if(cameraMode == 2 ){
             Debug.Log("third mode");
             FPCamera.enabled = false;
             mainCamera.enabled = true;
             TPCamera.enabled = false;
-            cameraMode2 = 0;
+            cameraMode = 0;
             StartCoroutine("ChangeCameraText");
         }
 
     }
 
+    // 카메라 종류 텍스트 출력 
     IEnumerator ChangeCameraText()
     {
         panelImage.enabled = true;
-        if(cameraMode2 == 1)
+        if(cameraMode == 1)
         {
             FCTxt.enabled = true;
         }
-        else if (cameraMode2 == 2)
+        else if (cameraMode == 2)
         {
             TCTxt.enabled = true;
         }
-        else if(cameraMode2 == 0)
+        else if(cameraMode == 0)
         {
             FixCTxt.enabled = true;
         }
@@ -72,6 +73,8 @@ public class resetTransform : MonoBehaviour
         TCTxt.enabled = false;
         FixCTxt.enabled = false;
     }
+
+    // 리셋버튼 클릭시 포지션, 로테이션초기화
     public void OnResetButton()
     {
         drone.GetComponent<Transform>().position = new Vector3(0,0,0);
@@ -79,6 +82,7 @@ public class resetTransform : MonoBehaviour
         Debug.Log("reset button clicked!");
     }
 
+    // X 버튼 클릭시 메뉴로 돌아감
     public void OnMenuButton()
     {
         SceneManager.LoadScene("Menu");

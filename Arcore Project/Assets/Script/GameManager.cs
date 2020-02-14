@@ -5,19 +5,20 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager instance; // 싱글톤
 
-    public GameObject pointCloud;
-    public GameObject planeGenerator;
+    public GameObject pointCloud;   // 평면 인식을 하는 point
+    public GameObject planeGenerator;   // 화면에 표시할 평면
 
-    GameObject scoreObj;
-    GameObject collCountObj;
-    Text scoreTxt;
-    Text collCountTxt;
-    public static int mScore = 0;
-    public static int mCollisionCount = 0;
+    GameObject scoreObj;    // Hierichy에 배치된 'ScoreTextPanel' Text Object
+    GameObject collCountObj;    // Hierichy에 배치된 'Collision' Text Object
+    Text scoreTxt;  // 'ScoreTextPanel' Text Object의 component 중 text 저장
+    Text collCountTxt;  // 'Collision' Text Obj의 componetn 중 text 저장
+    public static int mScore = 0;   // 점수
+    public static int mCollisionCount = 0; // 충돌 횟수
     void Awake()
     {
+        // 싱글톤
         if (instance == null) instance = this;
     }
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
         pointCloud.SetActive(true);
         planeGenerator.SetActive(true);
 
+        // 오브젝트 할당
         scoreObj = GameObject.Find("ScoreTextPanel");
         scoreTxt = scoreObj.GetComponent<Text>();
         scoreTxt.text = "Score : " + mScore.ToString();
@@ -35,12 +37,15 @@ public class GameManager : MonoBehaviour
         collCountTxt.text = "Collision Count : " + mCollisionCount.ToString();
     }
 
+    // 점수 증가
     public void UpgradeScore()
     {
         mScore += 100;
         scoreTxt.text = "Score : " + mScore.ToString();
     }
 
+
+    // 점수 감소 및 충돌 횟수 증가
     public void DowngradeScore()
     {
         if(mScore > 0)

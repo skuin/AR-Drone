@@ -21,6 +21,7 @@ public class PassTrigger : MonoBehaviour
 
     }
 
+    // 장애물 통과시 호출
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
