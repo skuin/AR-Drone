@@ -41,35 +41,35 @@ public class UIManager : MonoBehaviour
 
     public void SetEnableFalse()
     {
-        int count = UI.transform.childCount;
+        // int count = UI.transform.childCount;
 
-        for(int i = 0; i < count; ++i)
-        {
-            int childcount = UI.transform.GetChild(i).childCount;
+        // for(int i = 0; i < count; ++i)
+        // {
+        //     int childcount = UI.transform.GetChild(i).childCount;
 
-            for (int j = 0; j < childcount; ++j)
-            {
-                if (UI.transform.GetChild(i).GetChild(j).GetComponent<Image>() != null)
-                {
-                    UI.transform.GetChild(i).GetChild(j).GetComponent<Image>().enabled = false;
-                }
+        //     for (int j = 0; j < childcount; ++j)
+        //     {
+        //         if (UI.transform.GetChild(i).GetChild(j).GetComponent<Image>() != null)
+        //         {
+        //             UI.transform.GetChild(i).GetChild(j).GetComponent<Image>().enabled = false;
+        //         }
 
-                if (UI.transform.GetChild(i).GetChild(j).GetComponent<Text>() != null)
-                {
-                    UI.transform.GetChild(i).GetChild(j).GetComponent<Text>().enabled = false;
-                }
-            }
+        //         if (UI.transform.GetChild(i).GetChild(j).GetComponent<Text>() != null)
+        //         {
+        //             UI.transform.GetChild(i).GetChild(j).GetComponent<Text>().enabled = false;
+        //         }
+        //     }
 
-            if (UI.transform.GetChild(i).GetComponent<Image>() != null)
-            {
-                UI.transform.GetChild(i).GetComponent<Image>().enabled = false;
-            }
+        //     if (UI.transform.GetChild(i).GetComponent<Image>() != null)
+        //     {
+        //         UI.transform.GetChild(i).GetComponent<Image>().enabled = false;
+        //     }
 
-            if (UI.transform.GetChild(i).GetComponent<Text>() != null)
-            {
-                UI.transform.GetChild(i).GetComponent<Text>().enabled = false;
-            }
-        }
+        //     if (UI.transform.GetChild(i).GetComponent<Text>() != null)
+        //     {
+        //         UI.transform.GetChild(i).GetComponent<Text>().enabled = false;
+        //     }
+        // }
     }
 
     public void SetEnableTrue()

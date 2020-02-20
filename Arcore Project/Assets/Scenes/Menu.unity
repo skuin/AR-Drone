@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 271587072}
-        m_MethodName: OnClickStage2Button
+        m_MethodName: OnClickFreeStageButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

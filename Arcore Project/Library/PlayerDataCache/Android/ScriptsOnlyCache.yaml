@@ -29,6 +29,8 @@ ScriptsOnlyBuild:
     - WaypointRenderer
     - WaypointeRendererBuilder
     - resetTransform
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
@@ -107,19 +109,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9910}
     - Class: 114
-      Script: {instanceID: 9960}
-    - Class: 114
-      Script: {instanceID: 10090}
-    - Class: 114
       Script: {instanceID: 10108}
     - Class: 114
       Script: {instanceID: 10112}
     - Class: 114
-      Script: {instanceID: 10140}
-    - Class: 114
       Script: {instanceID: 10316}
-    - Class: 114
-      Script: {instanceID: 10378}
     - Class: 114
       Script: {instanceID: 10480}
     - Class: 114
@@ -133,13 +127,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10998}
     - Class: 114
-      Script: {instanceID: 11074}
-    - Class: 114
       Script: {instanceID: 11110}
     - Class: 114
       Script: {instanceID: 11172}
-    - Class: 114
-      Script: {instanceID: 11192}
     - Class: 114
       Script: {instanceID: 11194}
     - Class: 114
@@ -151,14 +141,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11496}
-    - Class: 114
       Script: {instanceID: 11506}
     - Class: 114
       Script: {instanceID: 11508}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -1724,6 +1710,6 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Stage1.unity
-  - Assets/Scenes/FreeStage.unity
   - Assets/Scenes/Stage2.unity
-  playerPath: "C:/Users/skuin/Desktop/JU/\uD604\uC7A5\uC2E4\uC2B5/ARCoreDrone.apk"
+  - Assets/Scenes/FreeStage.unity
+  playerPath: C:/Users/skuin/Desktop/ARCoreDroneFinal.apk

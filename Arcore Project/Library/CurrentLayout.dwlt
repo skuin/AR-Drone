@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 139
+  controlID: 71
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 145
+  controlID: 150
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -328,23 +328,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e4f3ffff
-      m_LastClickedID: -3100
-      m_ExpandedIDs: 64fbffffd4360000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: fee6feff32e7feff5ae7feffd0f2feff46fefeff4afefeff54fffeff8afffeffec00ffff620cffffe617ffffec17ffffc419fffffa19ffff041affff7a25fffff030fffff430fffff031ffff2632ffff3032ffffa63dffff1c49ffff2049ffffb04effff9a4fffff2650ffff5e50ffffc051ffff365dffffba68ffffc068ffffa46bffffde6bffffaa78ffffb678ffff2c84ffff3284ffff2ed8ffffc8e3ffff5cefffff64fbffff5a5f00001e60000030780000e47800001e7a0000407a00005e7a0000a07a00004a7b0000887b000060a600003ea70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: DronePrefab
+        m_OriginalName: DronePrefab
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 39516
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -428,20 +428,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Drones/DroneController/Scripts
+    - Assets/Script
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Drones/DroneController/Scripts
+  - Assets/Script
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\skuin\Documents\Unity Projects\AR Drone\Arcore Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca330000
-    m_LastClickedID: 13258
-    m_ExpandedIDs: 00000000602d0000fe2f00000a300000743000002e310000d6310000f03100003032000050330000823300009e3300001434000000ca9a3b
+    m_SelectedIDs: 54330000
+    m_LastClickedID: 13140
+    m_ExpandedIDs: 00000000602d0000fe2f00000a300000743000002e310000d6310000f0310000303200005433000086330000a23300001834000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,7 +469,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000602d0000fe2f00000a300000743000002e310000d6310000f03100003032000050330000823300009e33000014340000
+    m_ExpandedIDs: 00000000602d0000fe2f00000a300000743000002e310000d6310000f03100005433000086330000a233000018340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -500,18 +500,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 843c000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: GameManager
+      m_OriginalName: GameManager
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 9584
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_CreateAssetUtility:
@@ -641,9 +641,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.9069022, y: 0.06515682, z: 0.6084858}
+    m_Target: {x: 329.22562, y: 336.0832, z: -1106.25}
     speed: 2
-    m_Value: {x: 0.9069022, y: 0.06515682, z: 0.6084858}
+    m_Value: {x: 329.22562, y: 336.0832, z: -1106.25}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -672,13 +672,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.23883456, y: 0.4119611, z: -0.112818636, w: 0.87209344}
+    m_Target: {x: 0.22203037, y: -0.58494353, z: 0.17062384, w: 0.7612251}
     speed: 2
-    m_Value: {x: 0.23883112, y: 0.41195518, z: -0.11281701, w: 0.87208086}
+    m_Value: {x: 0.22202677, y: -0.58493406, z: 0.17062107, w: 0.76121277}
   m_Size:
-    m_Target: 5.3854184
+    m_Target: 22
     speed: 2
-    m_Value: 5.3854184
+    m_Value: 22
   m_Ortho:
     m_Target: 0
     speed: 2

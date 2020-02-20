@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointCloud.SetActive(true);
-        planeGenerator.SetActive(true);
+        //pointCloud.SetActive(true);
+        //planeGenerator.SetActive(true);
 
         // 오브젝트 할당
         scoreObj = GameObject.Find("ScoreTextPanel");

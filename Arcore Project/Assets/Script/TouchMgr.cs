@@ -35,7 +35,7 @@ public class TouchMgr : MonoBehaviour
         UIcanvas = GameObject.FindGameObjectWithTag("UI").GetComponent<Canvas>();
         //UIcanvas.enabled = false;
         PlaneGenerator = GameObject.Find("Plane Generator");
-        TrackManager = GameObject.Find("TrackManager");
+        TrackManager = GameObject.FindWithTag("TrackManager");
         DronePrefab = GameObject.Find("DronePrefab");
     }
 
